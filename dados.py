@@ -1,4 +1,4 @@
-#dados zika virus, sexo , segundo mês notificação
+#processamento dos dados arquivo csv zika virus, sexo , segundo mês notificação
 
 import pandas as pd
 
