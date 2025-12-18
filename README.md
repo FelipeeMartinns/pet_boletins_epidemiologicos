@@ -60,27 +60,7 @@ code .
 
 ---
 
-### passo-3 Criar um ambiente virtual (opcional, porém recomendado)
-
-A criação de um ambiente virtual evita conflitos de dependências entre projetos.
-
-#### Windows:
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-#### Linux:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-### passo-4 Instalar a biblioteca pandas
+### passo-3 Instalar a biblioteca pandas
 
 Com o ambiente virtual ativado (ou diretamente no sistema), execute:
 
@@ -104,7 +84,7 @@ python3 -m pip install pandas
 
 ---
 
-### passo-5 Executar o script de processamento
+### passo-4 Executar o script de processamento
 
 O script principal de leitura e processamento dos dados é o arquivo `dados.py`.
 
