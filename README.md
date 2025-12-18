@@ -150,7 +150,7 @@ Essas funcionalidades caracterizam um **teste de consumo e processamento de dado
 
 ---
 
-## 🛠️ Próximos passos (em desenvolvimento)
+## Próximos passos (em desenvolvimento)
 
 - Automatizar o download dos arquivos CSV
 - Geração de gráficos e relatórios
@@ -158,7 +158,7 @@ Essas funcionalidades caracterizam um **teste de consumo e processamento de dado
 
 ---
 
-## 👥 Observação para o grupo
+## Observação para o grupo
 
 Este projeto encontra-se em fase inicial e tem como foco validar a **viabilidade
 técnica de leitura e processamento dos dados epidemiológicos**, conforme discutido
