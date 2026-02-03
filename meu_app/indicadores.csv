@@ -1,0 +1,11 @@
+indicador,formula
+Taxa de incidência (número de casos com e sem confirmação laboratórial),casos novos/população*100
+Taxa de mortalidade,obitos por tuberculose/população*100000
+Número de casos com confirmação laboratórial,casos confirmados por exame/total de casos*100
+Uso do TRM (Teste Rápido Molecular): Independente do resultado,casos com TRM realizado/número total de casos*100
+Proporção de cura,casos curados/casos encerrados*100
+Abandono do tratamento,casos de abandono/casos encerrados*100
+Inicio de tratamento,casos de retratamento/total de casos*100
+Coinfecção TB/HIV,casos tuberculose com HIV positivo/total de casos*100
+casos em população vulneráveis,situação de rua+privados de liberdade+indígenas
+proporção de contatos investigados,contatos examinados/contatos registrados*100

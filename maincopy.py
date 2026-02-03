@@ -141,7 +141,7 @@ for i, ano in enumerate(anos_sel):
 
 st.divider()
 
-# Gráfico somente dos anos escolhidos
+# ✅ Gráfico somente dos anos escolhidos
 st.subheader("📈 Evolução do indicador (anos selecionados)")
 
 df_linha = linha.melt(
@@ -152,7 +152,7 @@ df_linha = linha.melt(
 
 df_linha["Ano"] = df_linha["Ano"].astype(str)
 
-#filtrar só os anos marcados
+# ✅ filtrar só os anos marcados
 df_linha = df_linha[df_linha["Ano"].isin(anos_sel)]
 
 st.line_chart(df_linha.set_index("Ano")["Valor"])
