@@ -352,6 +352,31 @@ df_long = df_filtrado.melt(
 df_long = df_long[df_long["Ano"].isin(anos_sel)]
 df_long["Valor"] = pd.to_numeric(df_long["Valor"], errors="coerce")
 
+
+def mostrar_formula():
+    for ind in indicadores_sel:
+        nome = ind.lower()
+
+        if "incid" in nome:
+            return "Fórmula: Casos novos ÷ População × 100.000"
+
+        elif "mortal" in nome or "óbito" in nome or "obito" in nome:
+            return "Fórmula: Óbitos por TB ÷ População × 100.000"
+
+        elif "cura" in nome:
+            return "Fórmula: Casos encerrados como cura ÷ Casos com desfecho conhecido × 100"
+
+        elif "hiv" in nome:
+            return "Fórmula: Casos de TB com HIV positivo ÷ Casos testados para HIV × 100"
+
+        elif "vulner" in nome or "popula" in nome:
+            return "Fórmula: Soma dos casos em situação de rua, PPL, indígenas, idosos e outras condições de vulnerabilidade"
+
+        else:
+            return "Fórmula definida conforme protocolo da vigilância epidemiológica."
+
+        # st.markdown(f"**{ind}**  \n{formula}")
+formula=mostrar_formula()
 # ==========================================
 # GRÁFICO (FORMATADO EM %)
 # ==========================================
@@ -382,34 +407,12 @@ grafico = alt.Chart(df_long).mark_line(point=True).encode(
     width=750,
     height=450
 )
+st.markdown(f"{formula}")
 
 st.altair_chart(grafico, use_container_width=True)
 
 # ==========================================
 # FÓRMULAS
 # ==========================================
-st.divider()
-st.subheader("Fórmula(s) do(s) indicador(es)")
-
-for ind in indicadores_sel:
-    nome = ind.lower()
-
-    if "incid" in nome:
-        formula = "Fórmula: Casos novos ÷ População × 100.000"
-
-    elif "mortal" in nome or "óbito" in nome or "obito" in nome:
-        formula = "Fórmula: Óbitos por TB ÷ População × 100.000"
-
-    elif "cura" in nome:
-        formula = "Fórmula: Casos encerrados como cura ÷ Casos com desfecho conhecido × 100"
-
-    elif "hiv" in nome:
-        formula = "Fórmula: Casos de TB com HIV positivo ÷ Casos testados para HIV × 100"
-
-    elif "vulner" in nome or "popula" in nome:
-        formula = "Fórmula: Soma dos casos em situação de rua, PPL, indígenas, idosos e outras condições de vulnerabilidade"
-
-    else:
-        formula = "Fórmula definida conforme protocolo da vigilância epidemiológica."
-
-    st.markdown(f"**{ind}**  \n{formula}")
+# st.divider()
+# st.subheader("Fórmula(s) do(s) indicador(es)")
